@@ -1,16 +1,17 @@
 ; Ler três valores, salva e exibe-os
 
-    IN 0x10 ;
-    STA A   ;
-    IN 0x10 ;
-    STA B   ;
-    IN 0x10 ;
-    STA C   ;
-    ADD B   ;
-    ADD A   ;
-    STA TOT ;
-    OUT 0x10;
-    HLT ;
+    IN 0x10 ; Digita um valor no acc
+    STA A   ; salva acc -> A
+    IN 0x10 ; Digita um valor no acc
+    STA B   ; salva acc -> A
+    IN 0x10 ; Digita um valor no acc
+    STA C   ; salva acc -> A
+; Valor do acc = C
+    ADD B   ; acc + B
+    ADD A   ; acc + A
+    STA TOT ; acc -> TOT
+    OUT 0x10; exibe acc
+    HLT ; fim
 
 A: 0x00     ;
 B: 0x00     ;
