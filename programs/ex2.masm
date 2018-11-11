@@ -9,7 +9,7 @@ LOOP:   LDA I   ;
         SUB MAX ;
         JN LOOP ;
     LDA I  ;
-    OUT 0x00;
+    OUT 0x10;
     HLT;
 
 
