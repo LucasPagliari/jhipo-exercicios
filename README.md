@@ -13,6 +13,9 @@ Como executar:
 2. Em um prompt de comandos, navegue até o diretório onde está o arquivo .jar (utilizando o comando: cd ) utilize a tecla TAB para autopreencher;
 
 3. Execute:
-• java -cp jhipo-vyyyyddmm.jar masm +a (seu diretório)\ex1.masm program\ex1.asm;
-  O arquivo .asm será automáticamente criado na execução desse comando
-  O comando "+a" mostra o mapa da memória 
+• java -cp jhipo-vyyyyddmm.jar masm +a (seu diretório)\ex1.masm (seu diretório)\ex1.asm;
+ - O arquivo .asm será automáticamente criado na execução desse comando
+ - O comando "+a" mostra o mapa da memória.
+ 
+3.1. Para executar o .asm use o comando: 
+• java -cp jhipo-vyyyyddmm.jar jhipovm +o +a (seu diretório)\ex1.asm;
