@@ -1,0 +1,18 @@
+; Ler três valores, salva e exibe-os
+
+    IN 0x10 ;
+    STA A   ;
+    IN 0x10 ;
+    STA B   ;
+    IN 0x10 ;
+    STA C   ;
+    ADD B   ;
+    ADD A   ;
+    STA TOT ;
+    OUT 0x10;
+    HLT ;
+
+A: 0x00     ;
+B: 0x00     ;
+C: 0x00     ;
+TOT: 0x00   ;
