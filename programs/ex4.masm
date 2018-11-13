@@ -1,4 +1,4 @@
-; DIVISÃO INTEIRA
+; Divisão Inteira
     IN 0x10 ; user input the value
     STA X   ; save on X var
     IN 0x10 ; "     "
