@@ -1,4 +1,4 @@
-;Print de Contagem até o número inserido (hexa)
+;Print de Contagem até o número inserido(hexa)
 
     IN 0x10 ; Digita um número no acc
     STA MAX ; acc -> var max
