@@ -1,4 +1,4 @@
-;Multipliação de números inseridos
+;Multipliação de dois números inseridos
 
     IN 0x10 ; user type the value
     STA X   ; save on X var
