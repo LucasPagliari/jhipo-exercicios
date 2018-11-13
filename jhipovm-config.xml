@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>JHIPOVM I/O device list [auto-generated]</comment>
+<entry key="device0">jandl.aoc.jhipo.SimpleConsole</entry>
+<entry key="address0">10</entry>
+</properties>
