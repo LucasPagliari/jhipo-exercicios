@@ -1,0 +1,18 @@
+;conversor de °C para °F   
+INIT:   
+        LDA ZERO;
+        IN 0x10;
+        OUT 0x10;
+        STA X  ;
+        AND CEM;
+        OUT 0x10;
+        JN INIT;
+        JZ INIT;   
+    HLT;
+
+
+
+
+ZERO:   0x00;
+X:      0x00;
+CEM:    0x64 ; 100
