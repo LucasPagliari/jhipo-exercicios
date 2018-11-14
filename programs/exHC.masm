@@ -1,18 +1,55 @@
-;conversor de °C para °F   
-INIT:   
-        LDA ZERO;
-        IN 0x10;
-        OUT 0x10;
-        STA X  ;
-        AND CEM;
-        OUT 0x10;
-        JN INIT;
-        JZ INIT;   
-    HLT;
+    IN 0x10;
+    STA C
+    STA DIV
+    CALL DIVIS 
+    LDA QUOC;
+    OUT 0x10;
+    CALL VEZES;
+    OUT 0x10;
+    LDA QUOC
+    STA C2
+    LDA RESTO
+    STA QUOC
+    CALL VEZES;
+    ADD C
+    ADD C2
+    OUT 0x10
+DIVIS:  LDA DIV ;
+        STA RESTO;
+        SUB I5  ;
+        JN  0x08; 
+        STA DIV ; 
+        LDA QUOC; 
+        ADD ONE ;
+        STA QUOC; Resultado da divisão
+        LDA DIV ;
+        JZ ZERARESTO;
+    JMP DIV;
+ZERARESTO:  LDA ZERO
+            STA RESTO
+            JMP 0x08
+VEZES:  LDA QUOC; 
+        ADD QUOC; 
+        STA QUOC; 
+        LDA CONT; load control var
+        ADD ONE ; + 1
+        STA CONT; save ctrl value
+        SUB I4  ; subtract 4,
+        JN VEZES; each time this result gets higher until zero
+        RET       
+ZERO:   0x00; zero
+ONE:    0x01; um
+C:      0x00; Celsius
+C2:     0x00
+I5:     0x05; divisão
+I4:     0x04; Contador para multiplicação
+DIV:    0x00
+CONT:   0x00; Contador
+QUOC:   0x00; Quociente
+RESTO:  0x00; Resto da divisão
 
 
 
 
-ZERO:   0x00;
-X:      0x00;
-CEM:    0x64 ; 100
+
+        
