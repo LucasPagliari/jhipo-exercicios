@@ -20,5 +20,5 @@ Como executar:
 3.1. Para executar o .asm use o comando: 
 • java -cp jhipo-vyyyyddmm.jar jhipovm +o +a (seu diretório)\ex1.asm;
 
-3.2 Para executar o .masm use o comando:
-• java -cp jhipo-vyyyyddmm.jar jhipovm +e (seu diretório)\ex1.asm;
+3.2 Para executar o .masm direto use o comando:
+• java -cp jhipo-vyyyyddmm.jar masm +e (seu diretório)\ex1.masm;
