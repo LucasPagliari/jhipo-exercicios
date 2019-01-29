@@ -5,7 +5,7 @@ Criado por:
   
 Objetivo: Disponibilizar conteúdo para estudo dos alunos de Tecnologia de Análise e Desenvolvimento de Sistemas.
 
-Need Java 1.8 +
+Requisito: Java 1.8 +
 
 Como executar: 
 1. Mantenha os arquivos .masm no mesmo diretório que o arquivo .jar correspondente ao JHIPO ou em um subdiretório direto;
@@ -22,3 +22,5 @@ Como executar:
 
 3.2 Para executar o .masm direto use o comando:
 • java -cp jhipo-vyyyyddmm.jar masm +e (seu diretório)\ex1.masm;
+
+Conteúdo: https://drive.google.com/open?id=1Nn5GXN-8dg1xKHN_lFzVGdWt1B6Fzaul
