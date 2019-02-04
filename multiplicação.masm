@@ -1,0 +1,31 @@
+;Multipliação de dois números inseridos
+
+    IN 0x10 ; user type the value
+    STA X   ; save on X var
+    IN 0x10 ; user type the value
+    STA Y   ; save on Y var
+
+    LDA ZERO; Garants that acc, CTRL and EQ are zero{
+    STA CTRL;
+    STA EQ  ; }
+
+LOOP:   LDA EQ  ; load EQ
+        ADD Y   ; Add number Y
+        STA EQ  ; Save EQ
+
+        LDA CTRL; load control var
+        ADD ONE ; + 1
+        STA CTRL; save ctrl value
+        SUB X   ; subtract X,
+        JN LOOP ; each time this result gets higher until zero
+
+    LDA EQ  ;     load final result
+    OUT 0x10;     show on console
+    HLT; end
+
+X:      0x00;
+Y:      0x00; 
+EQ:     0x00;
+CTRL:   0x00;   
+ONE:    0x01; constant
+ZERO:   0x00; constant

@@ -1,0 +1,19 @@
+;Print de Contagem até o número inserido(hexa)
+
+    IN 0x10 ; Digita um número no acc
+    STA MAX ; acc -> var max
+
+LOOP:   LDA I   ; carrega var I no acc
+        ADD ONE ; + 1
+        OUT 0x10; exibe o acc
+        STA I   ; salva acc -> I
+        SUB MAX ; -Max (número digitado)
+        JN LOOP ; é Negativo? Sim: Volta em LOOP
+
+    LDA I  ; carrega I -> acc
+    OUT 0x10; exibe acc
+    HLT; fim
+
+I:      0x00; 
+ONE:    0x01; constante
+MAX:    0x00; 

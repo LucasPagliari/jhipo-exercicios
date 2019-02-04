@@ -1,0 +1,100 @@
+;****************************************
+; File: exHC.masm (hc = Hardcore) :) <3
+; Purpose: Celsius to Fahrenheit
+; Lucas A. Pagliari
+; Jackson Fonseca 
+; Date: 2018-11-25
+;****************************************   
+    
+    IN 0x10
+    STA c
+    STA divid
+
+    CALL loopDiv
+    LDA quoc
+    STA times
+    CALL loopMul
+    ADD c
+    ADD cts
+    STA f
+
+    LDA zero
+    STA eq
+    STA cont
+    STA quoc
+
+    LDA resto
+    STA times
+
+    CALL loopMul
+    STA divid
+    CALL loopDiv
+
+    ADD f 
+    OUT 0x10; resultado aparece 3x no final
+    OUT 0x10
+    OUT 0x10
+    HLT
+
+;Divisão
+loopDiv:LDA divid 
+        STA resto
+        SUB i5 
+        JN  fim
+
+        STA divid 
+        LDA quoc 
+        ADD one 
+        STA quoc; Resultado da divisão
+
+        LDA divid
+        JZ fimsr
+    JMP loopDiv   
+
+    fim:    LDA quoc
+            OUT 0x10
+            RET
+
+    fimsr:  LDA zero
+            STA resto
+            LDA quoc
+            OUT 0x10
+            RET
+
+
+;Multiplicação
+loopMul:LDA eq
+        ADD times
+        STA eq
+
+        LDA cont
+        ADD one
+        STA cont
+        SUB i4
+        JN loopMul
+    JMP fimMul
+    
+    fimMul: LDA eq
+            OUT 0x10
+            RET
+
+
+zero:   0x00; zero
+one:    0x01; um
+c:      0x00; Celsius
+f:      0x00; Fahrenheit
+cts:    0x20; + 32
+i5:     0x05; divisão
+i4:     0x04; multiplicação
+divid:  0x00; dividendo
+cont:   0x00; Contador
+quoc:   0x00; Quociente
+times:  0x00; vezes
+resto:  0x00; Resto da divisão
+eq:     0x00; equals 
+
+
+
+
+
+        

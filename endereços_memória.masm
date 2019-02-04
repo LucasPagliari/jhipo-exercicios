@@ -1,0 +1,22 @@
+; Digita nos últimos 32 endereços da mem. o número inserido
+    IN 0x10 ;
+    STA X   ;
+
+LOOP:   LDA X   ; 
+        STA 0xE0;
+        LDA S   ;
+        ADD UM  ;
+        STA S   ;
+        STA 0x07;
+        LDA I   ;
+        SUB UM  ;
+        STA I   ;
+        JZ SAIR ;
+        JMP LOOP;
+SAIR: HLT;
+
+
+X: 0x00;
+S: 0xE0;
+I: 0x20;
+UM:0x01;
