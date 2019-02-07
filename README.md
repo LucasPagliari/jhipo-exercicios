@@ -11,7 +11,7 @@ Simplificado o conteúdo para os alunos de Tecnologia de Análise e Desenvolvime
 
 ### How to: 
 1. No prompt de comando: Utilizando o comando: cd navegue até o diretório (use tecla TAB para autopreencher)
->  jhipo-vyyyyddmm.jar será o arquivo que foi dispinibilizado, no caso deste repositório jhipo-v20181018.jar
+>  jhipo-vyyyyddmm.jar será o arquivo que foi disponibilizado, no caso deste repositório jhipo-v20181018.jar
 
 Assembly: `java -cp jhipo-vyyyyddmm.jar jhipovm +h` para obter as opções de parâmetros  
 
@@ -40,7 +40,7 @@ MacroAssembly: `java -cp jhipo-vyyyyddmm.jar masm +h`
 2. Executando arquivos em assembly:  
 `java -cp jhipo-vyyyyddmm.jar jhipovm +a +e programs\arquivo.asm`  
 
-3. Executando arquivos diretamente em macroassembly:
+3. Executando arquivos diretamente em macroassembly:  
 `java -cp jhipo-vyyyyddmm.jar masm +e programs\arquivo.masm`  
  
 4. Gerando Arquivos Assembly pelo MacroAssembly:
@@ -66,4 +66,4 @@ MacroAssembly: `java -cp jhipo-vyyyyddmm.jar masm +h`
 | 0xE0 | OUT end | I/O(end) <- ACC  |
 | 0xF0 | HTL | Término de execução  |
 
-[Material](https://drive.google.com/open?id=1Nn5GXN-8dg1xKHN_lFzVGdWt1B6Fzaul/):
+[Material Extra](https://drive.google.com/open?id=1Nn5GXN-8dg1xKHN_lFzVGdWt1B6Fzaul/)
